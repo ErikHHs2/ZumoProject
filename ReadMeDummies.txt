@@ -31,3 +31,5 @@ Stap 3 (git commit & push)
 			"git add -A"
 			"git commit -m "hier je commit text"
 			"git push"
+
+jesse
