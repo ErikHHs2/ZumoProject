@@ -24,7 +24,7 @@ void loop() {
  Serial.println("Left Sensor: " + String(left_sensor));
  Serial.println("voor Left Sensor: " + String(center_left_sensor));
  Serial.println("voor right Sensor: " + String(center_right_sensor));
- Serial.println("voor right : " + String(right_sensor));
+ Serial.println("right : " + String(right_sensor));
  delay(500);
  
  // hiermee kan je met data van de linker sensor een bocht maken 
@@ -34,8 +34,8 @@ void loop() {
 //  motors.setSpeeds(0, 0);
     
  
- if (center_left_sensor >6){
-    motors.setSpeeds(200, 0);
+ if (center_left_sensor >1){
+    motors.setSpeeds(20, 0);
     delay(1900);
     motors.setSpeeds(0, 0);
     
