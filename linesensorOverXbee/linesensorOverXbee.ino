@@ -57,7 +57,7 @@ void setup()
 
 void printReadingsToSerial()
 {
-  char buffer[80];
+  char buffer[800];
   sprintf(buffer, "%4d %4d %4d %4d %4d %c\n",
     lineSensorValues[0],
     lineSensorValues[1],
@@ -87,7 +87,7 @@ void loop()
 
   static uint16_t lastSampleTime = 0;
 
-  if ((uint16_t)(millis() - lastSampleTime) >= 100)
+  if ((uint16_t)(millis() - lastSampleTime) >= 1000)
   {
     lastSampleTime = millis();
 
@@ -99,4 +99,31 @@ void loop()
   }
 
   motors.setSpeeds(leftSpeed, rightSpeed);
+  
+    if (500 < lineSensorValues[2] && lineSensorValues[2] < 800)
+  {
+      delay(500);
+      Serial1.print("zwart");
+  }else if (250 < lineSensorValues[2] && lineSensorValues[2] < 400)
+  {
+      delay(500);
+      Serial1.print("bruin");
+  }else if (120 < lineSensorValues[2] && lineSensorValues[2] < 220)
+  {
+      delay(500);
+      Serial1.print("groen");
+  }else if ( 450 < lineSensorValues[0] && lineSensorValues[0] < 550 )
+  {
+      delay(500);
+      Serial1.print("grijs links");
+  }else if (450 < lineSensorValues[4] && lineSensorValues[4] < 550)
+  {
+      delay(500);
+      Serial1.print("Grijs Rechts");
+  };
 }
+
+
+
+
+
