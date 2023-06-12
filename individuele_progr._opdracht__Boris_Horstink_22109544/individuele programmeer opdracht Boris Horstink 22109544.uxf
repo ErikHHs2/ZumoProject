@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Zumo32U4Buzzer
+--
+
+
+--
++isPlaying()
++play()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>40</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Zumo32U4LineSensors
+--
+-lineSensorValues : unsigned int
+-useEmitters : bool
+-buffer : char
+-position : int16_t
+--
++calibrate()
++initFiveSensors()
++readLine()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>290</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Zumo32U4Motors
+--
+-leftSpeed : int 16_t
+-rightSpeed : int 16_t
+-maxSpeed : uint16_t
+-speedDifference : int 16_t
+--
++setSpeeds()
++constrain()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>290</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Zumo32U4ButtonA
+--
+
+
+--
++waitForButton()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
