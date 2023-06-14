@@ -57,7 +57,7 @@ void setup()
 void printReadingsToSerial()
 {
   char buffer[80];
-  sprintf(buffer, "%4d %4d %4d %4d %4d %c\n",
+  sprintf(buffer,  "%4d %4d %4d %4d %4d %c\n",
     lineSensorValues[0],
     lineSensorValues[1],
     lineSensorValues[2],
@@ -65,7 +65,7 @@ void printReadingsToSerial()
     lineSensorValues[4],
     useEmitters ? 'E' : 'e'
   );
-  Serial.print(buffer);
+  
 }
 
 void loop()
@@ -97,5 +97,5 @@ void loop()
     printReadingsToSerial();
   }
 
-  motors.setSpeeds(leftSpeed, rightSpeed);
+  //motors.setSpeeds(leftSpeed, rightSpeed);
 }
