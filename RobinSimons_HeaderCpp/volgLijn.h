@@ -8,7 +8,7 @@
 
 #define NUM_SENSORS 5
 
-class LineSensor {
+class volgLijn {
 public:
 
   Zumo32U4LineSensors lineSensors;
@@ -17,12 +17,13 @@ public:
   void setup();
 
   void rijdenZwart();
+  void rijdenGroen();
 
   unsigned int lineSensorValues[NUM_SENSORS];
 
-  uint16_t maxSpeed = 200;
+  int maxSpeed = 200;
 
-  uint16_t lastError;
+  int lastError;
 
   bool useEmitters = true;
 

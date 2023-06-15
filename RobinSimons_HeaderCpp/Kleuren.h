@@ -9,6 +9,8 @@
 #define NUM_SENSORS 5
 
 
+
+
 class Kleuren {
 public:
 
@@ -17,15 +19,19 @@ public:
   Zumo32U4Motors motors;
 
   void calibrateSensors();
-  void Groenwaardes();
+  int Groenwaardes();
   int ZwartWardes();
-  void bruinWaardes();
-  // void printReadingsToSerial();
-  void printReadingsToSerial1();
+  virtual int bruinWaardes();
+  void printReadingsToSerial();
+
+
+
+private:
 
   unsigned int GroenWaarde[NUM_SENSORS];
   unsigned int lineSensorValues[NUM_SENSORS];
   unsigned int ZwartWarde[NUM_SENSORS];
+  unsigned int BruinWaarde[NUM_SENSORS];
 
   int GroenMin = 2000;
   int GroenMax = 0;
@@ -36,8 +42,6 @@ public:
   int bruinMin = 2000;
   int bruinMax = 0;
   bool useEmitters = true;
-
-private:
 };
 
 #endif
