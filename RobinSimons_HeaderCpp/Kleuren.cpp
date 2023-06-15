@@ -97,11 +97,11 @@ void Kleuren::printReadingsToSerial() {
 
   char buffer[80];
   sprintf(buffer, "%4d %4d %4d %4d %4d %c\n",
-          ZwartWarde[0],
-          ZwartWarde[1],
-          ZwartWarde[2],
-          ZwartWarde[3],
-          ZwartWarde[4],
+          lineSensorValues[0],
+          lineSensorValues[1],
+          lineSensorValues[2],
+          lineSensorValues[3],
+          lineSensorValues[4],
           useEmitters ? 'E' : 'e');
   Serial.print(buffer);
 }
