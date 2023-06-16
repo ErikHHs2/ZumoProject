@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>480</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>VolgLijn
+--
+
+--
+- setup() : void
+- rijdenZwart() : void
+- rijdenGroen() : void 
+- ineSensorValues[NUM_SENSORS] : unsigned int
+-  maxSpeed : uint16_t 
+- lastError : uint16_t 
+- useEmitters : bool </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>50</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>ProximitySensor
+--
+
+--
++ duwBlokje() : void
++ bruinWaardes() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>30</y>
+      <w>330</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Kleuren
+--
+- GroenMin : int
+- GroenMax : int
+- ZwartMin : int
+- ZwartMax : int
+- WitMax : int
+- WitMin : int
+- bruinMin : int
+- bruinMax : int
+- useEmitters : bool
+- ZwartWarde[NUM_SENSORS] : unsigned int
+- GroenWaarde[NUM_SENSORS] : unsigned int
+- BruinWaarde[NUM_SENSORS] : unsigned int
+- lineSensorValues[NUM_SENSORS] : unsigned int
+--
++ calibrateSensors(): void 
++ Groenwaardes(): void 
++ ZwartWardes(): int  
++ bruinWaardes(): int
++ printReadingsToSerial(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>150</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>340</y>
+      <w>60</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..5
+m1=3
+heeft</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+</diagram>
